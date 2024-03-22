@@ -1,0 +1,164 @@
+
+* {
+  font-family: Consolas;
+  user-select: none;
+}
+
+  body {
+  background-color: black;
+  scroll-behavior: smooth;
+  overflow: hidden;
+
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+} p {
+  color: #FFF;
+} label {
+  font-family: Consolas;
+  color: #FFF;
+} label:hover {
+  color: #BEBEBE;
+} input {
+  display: none;
+  z-index: -1;
+} code {
+  color: #FFF;
+  white-space: nowrap;
+} pre {
+  color: #FFF;
+  background-color: #111;
+} button, select {
+  color: #FFF;
+  background-color: #000;
+  border-radius: 0.1rem;
+} option {
+  user-select: #FFF;
+} a {
+  color: #FFF;
+} a:hover {
+  color: #BEBEBE;
+} a.noline {
+  text-decoration: none;
+}
+
+#highlighter, #custom-tuning {
+  padding-top: 1rem;
+}
+
+#frets {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+  .fret {
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  padding-top: 1.25px;
+  padding-bottom: 1.25px;
+  font-size: 1.25rem;
+  text-align: center;
+  background-color: #4F200F;
+} .fret.bass {
+  height: 33px;
+} .fret.guitar {
+  height: 22px;
+} .fret-text {
+  display: inline-block;
+  vertical-align: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #999;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+} .tooltip-trigger {
+  font-weight: 1000;
+  cursor: help;
+} .tooltip {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  border: 1px solid #999;
+  padding: 5px;
+  border-radius: 3px;
+  color: #999;
+  z-index: 1000;
+} .tooltip-trigger:hover .tooltip {
+  display: block;
+}
+
+  .fret.bass p {
+  line-height: 33px;
+} .fret.guitar p {
+  line-height: 22px;
+}
+
+  #fret-points {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+} .fret-nopoint {
+  position: relative;
+  height: auto;
+  padding: 2.5px;
+} .fret-point {
+  position: relative;
+  width: 3.5%;
+  aspect-ratio: 1;
+  height: auto;
+  padding: 2.5px;
+} .fret-point::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(187, 187, 187);
+}
+
+  .first-fret {
+  box-shadow: 5px 0 0 #999;
+  background-color: #3f1a0c;
+} .middle-fret {
+  box-shadow: 5px 0 0 #B8860B;
+} .last-fret {
+  box-shadow: 0 0 0 #000;
+}
+
+  #logo {
+  font-size: 75px;
+} #tabs {
+  display: block;
+  width: 100%;
+  height: 125px;
+  overflow-x: scroll;
+} #particles-js {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+  @keyframes fade-in {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+} @keyframes rotate {
+  from {
+    transform: rotate(2.5deg);
+  } to {
+    transform: rotate(0deg);
+  }
+}
