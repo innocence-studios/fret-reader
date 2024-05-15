@@ -8,7 +8,7 @@ let gain;
 context.resume();
 
 // Importing JSON data from play example
-import tab from './ComeAsYouAre.json' assert { type: 'json' };
+// import tab from './ComeAsYouAre.json' assert { type: 'json' };
 
 // Subscripts for representing musical notes in HTML
 const subscripts = {
@@ -245,6 +245,7 @@ setInterval(() => {
 }, 500);
 
 // Play example tab
+/*
 let playing = false;
 document.getElementById('play').addEventListener('click', async () => {
   playing = !playing; // Toggles playing
@@ -261,7 +262,7 @@ setInterval(() => { // Play the notes one by one with delay (setTimeout not work
     if (j == tab.tabs.length) j = 0;
   };
 }, 60000 / tab.info.bpm);
-
+*/
 /**
  * Function to create a new HTML element with specified properties
  * @function
